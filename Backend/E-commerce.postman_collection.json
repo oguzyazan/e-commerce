@@ -1,0 +1,344 @@
+{
+	"info": {
+		"_postman_id": "306c0f38-814c-4765-a6b3-5709d104f790",
+		"name": "E-commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12426485"
+	},
+	"item": [
+		{
+			"name": "Product Microservice",
+			"item": [
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Get List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/product",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"Ürün 1\",\r\n    \"Description\": \"Ürün açıklama\",\r\n    \"Price\": 10,\r\n    \"CategoryId\": \"6675c1a46a7bf8b43d4f376c\",\r\n    \"BrandId\": \"6675bd02c12b454a38cca236\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/product",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/product?id=6675da7ce575ff5d412599e0",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"product"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "6675da7ce575ff5d412599e0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"Ürün_1\",\r\n    \"Description\": \"Ürün açıklama\",\r\n    \"Price\": 10,\r\n    \"CategoryId\": \"6675c1a46a7bf8b43d4f376c\",\r\n    \"BrandId\": \"6675bd02c12b454a38cca236\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/product?id=6675da7ce575ff5d412599e0",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"product"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "6675da7ce575ff5d412599e0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "Get List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/product/category",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"Kategori 2\",\r\n    \"ParentCategoryId\": \"6675c1a46a7bf8b43d4f376c\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/product/category",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/product/category?id=6675c1856a7bf8b43d4f3768",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"category"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "6675c1856a7bf8b43d4f3768"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"Kategori_1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/product/category?id=6675bce4c12b454a38cca230",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"category"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "6675bce4c12b454a38cca230"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Brand",
+					"item": [
+						{
+							"name": "Get List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/product/brand",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"brand"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"Marka 1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/product/brand",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"brand"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/product/brand?id=6675bbc160ecf90f413eb993",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"brand"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "6675bbc160ecf90f413eb993"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"Marka_1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/product/brand?id=6675bd02c12b454a38cca236",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"brand"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "6675bd02c12b454a38cca236"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
